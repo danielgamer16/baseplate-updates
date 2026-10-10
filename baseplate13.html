@@ -3231,7 +3231,7 @@ mb.onclick=()=>window.BP&&BP.toggle();
    Este bloco precisa ser o ÚLTIMO script do arquivo (depois do jogo, para o patch poder sobrescrever funções). */
 window.BP_UPDATE_URL="https://raw.githubusercontent.com/danielgamer16/baseplate-updates/main/patch.js";   // <-- COLE AQUI o link do seu patch.js (ex.: https://seuusuario.github.io/baseplate13/patch.js)
 (function(){
-const BASE=11,K='bp_upd_';           // BASE = número do arquivo completo (sobe quando você manda um HTML novo inteiro)
+const BASE=12,K='bp_upd_';           // BASE = número do arquivo completo (sobe quando você manda um HTML novo inteiro)
 const ls={g:k=>{try{return localStorage.getItem(K+k);}catch(e){return null;}},s:(k,v)=>{try{localStorage.setItem(K+k,v);}catch(e){}},d:k=>{try{localStorage.removeItem(K+k);}catch(e){}}};
 let url=window.BP_UPDATE_URL||'',applied=0;
 try{const q=new URLSearchParams(location.search).get('upd');if(q)ls.s('url',q);url=url||ls.g('url')||'';}catch(e){}
